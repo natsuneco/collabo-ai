@@ -49,6 +49,10 @@ section {
   display: none;
 }
 
+#webcam-container video {
+  width: 100%;
+}
+
 #label-container {
   display: none;
 }
