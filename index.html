@@ -71,9 +71,10 @@
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
+        let video;
         try {
           const stream = await navigator.mediaDevices.getUserMedia(videoConstraints);
-          const video = document.createElement('video');
+          video = document.createElement('video');
           video.srcObject = stream;
           video.play();
         } catch(e) {
