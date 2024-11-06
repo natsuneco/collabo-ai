@@ -29,6 +29,7 @@ section {
 #startScreen h1 img {
   display: block;
   width: 70%;
+  margin: 0 auto;
 }
 
 #startScreen button {
