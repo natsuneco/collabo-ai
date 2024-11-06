@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>これは何棟？</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
   </head>
   <body>
     <section id="startScreen">
@@ -17,7 +18,7 @@
       <div id="webcam-container"></div>
       <div id="label-container"></div>
       <div class="result">
-        <span class="this-building-is">この棟は...</span>
+        <span class="this-building-is">この建物は...</span>
         <span class="result-text" id="resultText">認識中</span>
       </div>
     </section>
@@ -55,7 +56,7 @@
 
       // Load the image model and setup the webcam
       async function init() {
-        document.getElementById("startButton").textContent = "読み込み中...";
+        document.getElementById("startButton").innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> 読み込み中';
         document.getElementById("startButton").disabled = true;
 
         const modelURL = URL + "model.json";
@@ -69,9 +70,9 @@
         maxPredictions = model.getTotalClasses();
 
         // Convenience function to setup a webcam
-        const flip = true; // whether to flip the webcam
+        const flip = false; // whether to flip the webcam
         webcam = new tmImage.Webcam(800, 800, flip); // width, height, flip
-        await webcam.setup(options=videoConstraints); // request access to the webcam
+        await webcam.setup(videoConstraints); // request access to the webcam
         await webcam.play();
         window.requestAnimationFrame(loop);
 
