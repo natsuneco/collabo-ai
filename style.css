@@ -23,17 +23,18 @@ section {
 
 #startScreen h1 {
   margin: 0;
-  color: #20bdc0;
+  color: #00A2F4;
 }
 
 #startScreen h1 img {
+  display: block;
   width: 70%;
 }
 
 #startScreen button {
   width: 80%;
   padding: .5em;
-  background-color: #20bdc0;
+  background-color: #00A2F4;
   color: white;
   font-size: 1.1em;
   font-weight: bold;
@@ -81,7 +82,7 @@ section {
 .result .result-text {
   padding: 8px 20px;
   border-radius: 100vw;
-  background-color: #20bdc0;
+  background-color: #00A2F4;
   color: #eee;
   font-size: 1.1em;
   font-weight: bold;
