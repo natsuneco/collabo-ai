@@ -46,6 +46,7 @@ section {
 
 #webcam-container canvas {
   width: 100%;
+  display: none;
 }
 
 #label-container {
