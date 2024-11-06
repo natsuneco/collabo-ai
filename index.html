@@ -51,12 +51,9 @@
       // 外カメラ設定
       const videoConstraints = {
         video: {
-          facingMode: "environment" ,
-          width: { ideal: 200 },
-          height: { ideal: 200 }
+          facingMode: "environment"
         }
       };
-
 
       // Load the image model and setup the webcam
       async function init() {
@@ -76,7 +73,7 @@
         // Convenience function to setup a webcam
         const flip = true; // whether to flip the webcam
         webcam = new tmImage.Webcam(800, 800, flip); // width, height, flip
-        await webcam.setup(videoConstraints); // request access to the webcam
+        await webcam.setup(options=videoConstraints); // request access to the webcam
         await webcam.play();
         window.requestAnimationFrame(loop);
 
