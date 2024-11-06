@@ -107,6 +107,7 @@
 
             return value > max.value ? { key, value } : max;
         }, { key: null, value: -Infinity });
+        // 画面に反映
         if (max.value <= 0.5) {
           resultTextElem.textContent = "認識中...";
         } else {
