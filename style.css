@@ -26,6 +26,10 @@ section {
   color: #20bdc0;
 }
 
+#startScreen h1 img {
+  width: 70%;
+}
+
 #startScreen button {
   width: 80%;
   padding: .5em;
