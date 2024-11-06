@@ -46,12 +46,12 @@ section {
 
 #webcam-container canvas {
   width: 100%;
-  display: none;
+  /* display: none; */
 }
 
-#webcam-container video {
+/* #webcam-container video {
   width: 100%;
-}
+} */
 
 #label-container {
   display: none;
