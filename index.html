@@ -71,10 +71,15 @@
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
-        const stream = await navigator.mediaDevices.getUserMedia(videoConstraints);
-        const video = document.createElement('video');
-        video.srcObject = stream;
-        video.play();
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia(videoConstraints);
+          const video = document.createElement('video');
+          video.srcObject = stream;
+          video.play();
+        } catch(e) {
+          alert("エラーが発生しました\n" + e);
+        }
+
 
         document.getElementById("webcam-container").appendChild(video);
 
